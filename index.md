@@ -1,32 +1,18 @@
-## Welcome to GitHub Pages
+## Cheng CHEN (陈成)
+I am a software engineer at HUAWEI.
+Love new technology, keep learning.
+Email: okchencheng@163.com
 
-You can use the [editor on GitHub](https://github.com/itchencheng/itchencheng.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### Work Experience
+2017~ now, Engineer ,  HUAWEI(Shanghai)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Education
+2014~2017,  Master  ,  [University of Science and Technology of China](http://www.ustc.edu.cn)
+2010~2014,  Bachelor,  [Shanghai Jiao Tong University](http://www.sjtu.edu.cn)
 
-### Markdown
+### Intrerest
+GPU Computing, Machine Learning, VLSI architecture
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
