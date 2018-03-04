@@ -4,7 +4,7 @@
 - **Email:** okchencheng@163.com
 
 ### **Work Experience**
-2017~ now, Engineer ,  HUAWEI (Shanghai)
+- 2017~ now, Engineer ,  HUAWEI (Shanghai)
 
 ### **Education**
 - 2014~2017,  Master  ,  [University of Science and Technology of China](http://www.ustc.edu.cn)
