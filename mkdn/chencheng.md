@@ -17,7 +17,7 @@ GPU Computing
 C/C++, Python
 
 ### Links
-Personal website[topzero.cn](topzero.cn)
+Personal website: [topzero.cn](topzero.cn)
 
 
 
