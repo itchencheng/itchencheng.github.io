@@ -4,9 +4,9 @@ A software engineer at HUAWEI Shanghai
 Email: chen23@mail.ustc.edu.cn
 
 ### Education
-2014~2017, Master, University of Science and Technology of China
+2014~2017, Master, [University of Science and Technology of China](http://www.ustc.edu.cn), Electronic Science and Technology
 
-2010~2014, Bachelor, Shanghai Jiao Tong University
+2010~2014, Bachelor, [Shanghai Jiao Tong University](http://www.sjtu.edu.cn), Microelectronics
 
 ### Interest
 Machine Learning
@@ -18,6 +18,3 @@ C/C++, Python
 
 ### Links
 Personal website: [topzero.cn](http://topzero.cn)
-
-
-
