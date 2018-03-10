@@ -1,5 +1,5 @@
-## 博客Blog
+## 博客
 ### Machine Learning
-k Nearest Neighbors: [kNN](https://github.com/itchencheng/pythonml/issues/1)
+kNN: [kNN](https://github.com/itchencheng/pythonml/issues/1)
 
-Decision Tree: [ID3/C4.5](https://github.com/itchencheng/pythonml/issues/2)
+决策树: [ID3/C4.5](https://github.com/itchencheng/pythonml/issues/2)
