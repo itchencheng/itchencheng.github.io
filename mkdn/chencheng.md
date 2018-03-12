@@ -11,7 +11,7 @@ Email: chen23@mail.ustc.edu.cn
 
 2010~2014, Bachelor, [Shanghai Jiao Tong University](http://www.sjtu.edu.cn), Microelectronics
 
-### Interest
+### Interests
 Machine Learning
 
 GPU Computing
