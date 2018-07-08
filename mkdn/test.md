@@ -13,3 +13,4 @@ So when write blog, using ## as the article title, the # size is the website tit
 其实这是因为有另外一个程序在运行，导致锁不可用。原因可能是上次运行更新或安装没有正常完成。解决办法是杀死此进程
 sudo rm /var/cache/apt/archives/lock
 sudo rm /var/lib/dpkg/lock
+`$Log(\theta)$`
