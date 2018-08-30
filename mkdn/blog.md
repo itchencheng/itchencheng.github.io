@@ -6,5 +6,5 @@
 
 
 ### kaggle practice
-1. [house_price](http://topzero.cn/mkdn/houce_price.html)
-2. [house_price_advanced](http://topzero.cn/mkdn/houce_price_advanced.html)
+1. [house_price](http://topzero.cn/mkdn/house_price.html)
+2. [house_price_advanced](http://topzero.cn/mkdn/house_price_advanced.html)
