@@ -19,9 +19,18 @@ GPU Computing
 ### Programming
 C/C++, Python
 
+### Honors
+Outstanding Graduate, University of Science and Technology of China, 2017
+
+USTC & Suzhou Industrial Park Scholarship, 2016
+
+Third-Class Scholarship, Shanghai Jiao Tong University, 2013
+
 ### Links
 Personal website: [topzero.cn](http://topzero.cn)
 
-Github          : [itchencheng](https://github.com/itchencheng)
+Github: [itchencheng](https://github.com/itchencheng)
 
-Netscope        : [Netscope](http://topzero.cn/netscope/index.html)
+Netscope: [Netscope](http://topzero.cn/netscope/index.html)
+
+others: [others](http://topzero.cn/mkdn/blog)

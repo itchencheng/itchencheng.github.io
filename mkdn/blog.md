@@ -6,5 +6,9 @@
 
 
 ### kaggle practice
-1. [house_price](http://topzero.cn/mkdn/house_price.html)
-2. [house_price_advanced](http://topzero.cn/mkdn/house_price_advanced.html)
+1. [house_price](http://topzero.cn/mkdn/kaggleClass/house_price.html)
+2. [house_price_advanced](http://topzero.cn/mkdn/kaggleClass/house_price_advanced.html)
+3. [news_stock](http://topzero.cn/mkdn/kaggleClass/news_stock.html)
+4. [news_stock_advanced](http://topzero.cn/mkdn/kaggleClass/news_stock_advanced.html)
+5. [search_2Brelevance](http://topzero.cn/mkdn/kaggleClass/search_2Brelevance.html)
+5. [search_2Brelevance_advanced](http://topzero.cn/mkdn/kaggleClass/search_2Brelevance_advanced.html)
