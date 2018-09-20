@@ -20,11 +20,11 @@ GPU Computing
 C/C++, Python
 
 ### Honors
-Outstanding Graduate, University of Science and Technology of China, 2017
+2017, Outstanding Graduate, University of Science and Technology of China
 
-USTC & Suzhou Industrial Park Scholarship, 2016
+2016, USTC & Suzhou Industrial Park Scholarship
 
-Third-Class Scholarship, Shanghai Jiao Tong University, 2013
+2013, Third-Class Scholarship, Shanghai Jiao Tong University
 
 ### Links
 Personal website: [topzero.cn](http://topzero.cn)
