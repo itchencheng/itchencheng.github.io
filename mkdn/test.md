@@ -14,3 +14,5 @@ So when write blog, using ## as the article title, the # size is the website tit
 sudo rm /var/cache/apt/archives/lock
 sudo rm /var/lib/dpkg/lock
 `$Log(\theta)$`
+
+Example (1): $h_\theta(x) = \Large\frac{1}{1 + \mathcal{e}^{(-\theta^\top x)}}$ ; example (2): $a^2 + b^2 = c^2$ ; example (3): $\sum_{i=1}^m y^{(i)}$
