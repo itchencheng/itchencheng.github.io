@@ -1,18 +1,40 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: Cheng CHEN
 ---
 
-Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
+A software engineer at HUAWEI Shanghai
 
-### Getting Started
+Email: chen23@mail.ustc.edu.cn
 
-[Getting Started]({{ site.github.url }}{% post_url 2015-10-10-getting-started %}): getting started with installing Lagrange, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
+### Work Experience
+2017~ now, Engineer, [HUAWEI Consumer Business Group](http://consumer.huawei.com), AI Computing on Mobile
 
-### Example Content
+### Education
+2014~2017, Master, [University of Science and Technology of China](http://www.ustc.edu.cn), Electronic Science and Technology
 
-[Text and Formatting]({{ site.github.url }}{% post_url 2014-01-01-text-formatting-examples %})
+2010~2014, Bachelor, [Shanghai Jiao Tong University](http://www.sjtu.edu.cn), Microelectronics
 
-### Questions?
+### Interests
+Machine Learning
 
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Lagrange%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new).
+GPU Computing
+
+### Programming
+C/C++, Python
+
+### Honors
+2017, Outstanding Graduate, University of Science and Technology of China
+
+2016, USTC & Suzhou Industrial Park Scholarship
+
+2013, Third-Class Scholarship, Shanghai Jiao Tong University
+
+### Links
+Personal website: [topzero.cn](http://topzero.cn)
+
+Github: [itchencheng](https://github.com/itchencheng)
+
+Netscope: [Netscope](http://topzero.cn/netscope/index.html)
+
+others: [others](http://topzero.cn/mkdn/blog)
