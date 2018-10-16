@@ -1,1 +1,0 @@
-watchify -v -t coffeeify D:/github/itchencheng.github.io/netscope/src/netscope.coffee -o D:/github/itchencheng.github.io/netscope/assets/js/netscope.js
