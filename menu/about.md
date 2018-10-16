@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Cheng CHEN
 ---
 
 A software engineer at HUAWEI Shanghai
