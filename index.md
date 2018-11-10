@@ -7,7 +7,7 @@ A software engineer at XXX Shanghai
 Email: chen23@mail.ustc.edu.cn
 
 ### Work Experience
-2017~ now, Engineer, XXX Consumer Business Group, AI Computing on Mobile
+2017~ now, Engineer, XXX, AI Computing on Mobile
 
 ### Education
 2014~2017, Master, [University of Science and Technology of China](http://www.ustc.edu.cn), Electronic Science and Technology
