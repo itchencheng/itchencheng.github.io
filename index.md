@@ -2,12 +2,12 @@
 layout: page
 ---
 
-A software engineer at XXX Shanghai
+A software engineer at HW Shanghai
 
 Email: chen23@mail.ustc.edu.cn
 
 ### Work Experience
-2017~ now, Engineer, XXX, AI Computing on Mobile
+2017~ now, Engineer, HW, AI Computing on Mobile
 
 ### Education
 2014~2017, Master, [University of Science and Technology of China](http://www.ustc.edu.cn), Electronic Science and Technology
@@ -34,6 +34,6 @@ Personal website: [topzero.cn](http://topzero.cn)
 
 Github: [itchencheng](https://github.com/itchencheng)
 
-Netscope: [Netscope](http://topzero.cn/netscope/index.html)
+Netscope: [Netscope](http://topzero.cn/sub_projects/netscope/index.html)
 
 others: [others](http://topzero.cn/mkdn/blog)
