@@ -27,7 +27,9 @@ C/C++, Python
 
 2016, USTC & Suzhou Industrial Park Scholarship
 
-2013, Third-Class Scholarship, Shanghai Jiao Tong University
+2013, Academic Excellence Scholarship (third-class), Shanghai Jiao Tong University
+
+2012, Academic Excellence Scholarship (third-class), Shanghai Jiao Tong University
 
 ### Links
 Personal website: [topzero.cn](http://topzero.cn)
