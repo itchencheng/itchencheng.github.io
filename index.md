@@ -15,14 +15,15 @@ Email: chen23@mail.ustc.edu.cn
 2010~2014, Bachelor, [Shanghai Jiao Tong University](http://www.sjtu.edu.cn), Microelectronics
 
 ### Interests
-Machine Learning
+Machine Learning / Deep Learning
 
-GPU Computing
+Programming / GPU Computing (OpenCL)
 
 ### Programming
 C/C++, Python
 
 ### Honors
+
 2017, Outstanding Graduate, University of Science and Technology of China
 
 2016, USTC & Suzhou Industrial Park Scholarship
