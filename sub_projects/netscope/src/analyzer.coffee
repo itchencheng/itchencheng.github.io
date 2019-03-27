@@ -518,7 +518,7 @@ module.exports =
                       d.mem.activation = d.wOut*d.hOut*d.chOut*d.batchOut
 
                 else # unknown layer;  print error message;
-                    onerror( layertype+' : The Layer is not support yet, contact cheng(c00423948).')
+                    onerror( layertype+' : The Layer is not support yet.')
                     console.log(n)
                     debugger;
 

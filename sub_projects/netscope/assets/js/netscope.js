@@ -16527,7 +16527,7 @@ module.exports = Analyzer = (function() {
           d.mem.activation = d.wOut * d.hOut * d.chOut * d.batchOut;
           break;
         default:
-          onerror(layertype + ' : The Layer is not support yet, contact cheng(c00423948).');
+          onerror(layertype + ' : The Layer is not support yet.');
           console.log(n);
           debugger;
       }
