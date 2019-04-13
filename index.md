@@ -2,12 +2,12 @@
 layout: page
 ---
 
-A software engineer at HW Shanghai
+A software engineer in Shanghai.
 
 Email: chen23@mail.ustc.edu.cn
 
 ### Work Experience
-2017~ now, Engineer, HW, AI Computing on Mobile
+2017~ now, Software Engineer, AI Computing on Mobile
 
 ### Education
 2014~2017, Master, [University of Science and Technology of China](http://www.ustc.edu.cn), Electronic Science and Technology
@@ -17,7 +17,7 @@ Email: chen23@mail.ustc.edu.cn
 ### Interests
 Machine Learning / Deep Learning
 
-Programming / GPU Computing (OpenCL)
+Programming / GPU Computing
 
 ### Programming
 C/C++, Python
@@ -26,7 +26,7 @@ C/C++, Python
 
 2017, Outstanding Graduate, University of Science and Technology of China
 
-2016, USTC & Suzhou Industrial Park Scholarship
+2016, Suzhou Industrial Park Scholarship, University of Science and Technology of China
 
 2013, Academic Excellence Scholarship (third-class), Shanghai Jiao Tong University
 
