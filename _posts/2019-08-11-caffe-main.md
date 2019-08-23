@@ -208,5 +208,245 @@ Net类的构造函数处理网络的构造，不论Train和Test，都能处理�
   bottom_need_backward_.resize(param.layer_size());
 ```
 
+x
 
+### 数据(featureMap, weights)都是在哪里分配的?
+
+x
+
+## 以LeNet训练MNIST为例子，讲解Caffe框架整体逻辑
+
+### 1. 下载dataset
+
+```shell
+for fname in train-images-idx3-ubyte train-labels-idx1-ubyte t10k-images-idx3-ubyte t10k-labels-idx1-ubyte
+do
+    if [ ! -e $fname ]; then
+        wget --no-check-certificate http://yann.lecun.com/exdb/mnist/${fname}.gz
+        gunzip ${fname}.gz
+    fi
+done
+```
+
+### 2. 将dataset转为LMDB格式
+
+需要写代码，利用LevelDB和LMDB库。
+
+MNIST dataset的详细数据格式，见Lecun网站 http://yann.lecun.com/exdb/mnist/。
+
+![1566391004164](2019-08-11-caffe-main.assets/1566391004164.png)
+
+```c++
+// Usage: ./convert_mnist_data input_image_file input_label_file output_db_file 
+convert_dataset(argv[1], argv[2], argv[3], db_backend);
+
+// 实现
+void convert_dataset(const char* image_filename, const char* label_filename,
+        const char* db_path, const string& db_backend/*lmdb*/) 
+{
+    // Open files
+    std::ifstream image_file(image_filename, std::ios::in | std::ios::binary);
+    std::ifstream label_file(label_filename, std::ios::in | std::ios::binary);
+    // Read the magic and the meta data
+    uint32_t magic;
+    uint32_t num_items;
+    uint32_t num_labels;
+    uint32_t rows;
+  	uint32_t cols;
+    // 读取文件头信息
+    image_file.read(reinterpret_cast<char*>(&magic), 4);
+    magic = swap_endian(magic);
+    CHECK_EQ(magic, 2051) << "Incorrect image file magic.";
+    
+    label_file.read(reinterpret_cast<char*>(&magic), 4);
+    magic = swap_endian(magic);
+    CHECK_EQ(magic, 2049) << "Incorrect label file magic.";
+    
+    image_file.read(reinterpret_cast<char*>(&num_items), 4);
+    num_items = swap_endian(num_items);
+    
+    label_file.read(reinterpret_cast<char*>(&num_labels), 4);
+    num_labels = swap_endian(num_labels);
+    CHECK_EQ(num_items, num_labels);
+    
+    image_file.read(reinterpret_cast<char*>(&rows), 4);
+    rows = swap_endian(rows);
+    image_file.read(reinterpret_cast<char*>(&cols), 4);
+    cols = swap_endian(cols);
+
+    
+    scoped_ptr<db::DB> db(db::GetDB(db_backend));
+    db->Open(db_path, db::NEW);
+    scoped_ptr<db::Transaction> txn(db->NewTransaction());
+
+    // Storing to db
+    char label;
+    char* pixels = new char[rows * cols];
+    int count = 0;
+    string value;
+
+    Datum datum;
+    datum.set_channels(1);
+    datum.set_height(rows);
+    datum.set_width(cols);
+    LOG(INFO) << "A total of " << num_items << " items.";
+    LOG(INFO) << "Rows: " << rows << " Cols: " << cols;
+    for (int item_id = 0; item_id < num_items; ++item_id) {
+        image_file.read(pixels, rows * cols);
+        label_file.read(&label, 1);
+        datum.set_data(pixels, rows*cols);
+        datum.set_label(label);
+        string key_str = caffe::format_int(item_id, 8);
+        datum.SerializeToString(&value);
+
+        txn->Put(key_str, value);
+
+        if (++count % 1000 == 0) {
+        	txn->Commit();
+        }
+    }
+    // write the last batch
+    if (count % 1000 != 0) {
+    	txn->Commit();
+    }
+    LOG(INFO) << "Processed " << count << " files.";
+    delete[] pixels;
+    db->Close();
+}
+```
+
+### 3. lenet_train_test.prototxt
+
+#### data layer
+
+```protobuf
+name: "LeNet"
+layer {
+  name: "mnist"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  transform_param {
+    scale: 0.00390625
+  }
+  data_param {
+    source: "examples/mnist/mnist_train_lmdb"
+    batch_size: 64
+    backend: LMDB
+  }
+}
+```
+
+训练所用的prototxt，其数据集的描述采用data layer。其data和label由一个lmdb提供。
+
+transform_parm提供了预处理的方式。data_param指明LMDB文件位置，batch_size。
+
+```protobuf
+layer {
+  name: "mnist"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TEST
+  }
+  transform_param {
+    scale: 0.00390625
+  }
+  data_param {
+    source: "examples/mnist/mnist_test_lmdb"
+    batch_size: 100
+    backend: LMDB
+  }
+}
+```
+
+然后是网络结构的描述
+
+```protobuf
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 20
+    kernel_size: 5
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+```
+
+最后是loss和accuracy
+
+```protobuf
+# fc层输出ip2
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "ip2"
+  bottom: "label"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+  top: "loss"
+}
+```
+
+我们来看一下DataLayer的实现：
+
+
+
+### 4. lenet_solver.protoxt
+
+```protobuf
+# The train/test net protocol buffer definition
+net: "examples/mnist/lenet_train_test.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+# In the case of MNIST, we have test batch size 100 and 100 test iterations,
+# covering the full 10,000 testing images.
+test_iter: 100
+# Carry out testing every 500 training iterations.
+test_interval: 500
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.01
+momentum: 0.9
+weight_decay: 0.0005
+# The learning rate policy
+lr_policy: "inv"
+gamma: 0.0001
+power: 0.75
+# Display every 100 iterations
+display: 100
+# The maximum number of iterations
+max_iter: 10000
+# snapshot intermediate results
+snapshot: 5000
+snapshot_prefix: "examples/mnist/lenet"
+# solver mode: CPU or GPU
+solver_mode: GPU
+
+```
 
