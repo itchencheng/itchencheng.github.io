@@ -7,7 +7,7 @@ google-ID: 'UA-112060364-1'
 
 menu:
 - {name: 'About', path: '.', url: 'index.html'}
-- {name: 'Writing', path: 'menu', url: 'writing.html'}
+- {name: 'Blog', path: 'menu', url: 'blog.html'}
 - {name: 'Archive', path: 'menu', url: 'archive.html'}
 - {name: 'Contact', path: 'menu', url: 'contact.html'}
 
