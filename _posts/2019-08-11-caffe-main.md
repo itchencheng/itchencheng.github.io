@@ -1,3 +1,7 @@
+---
+typora-root-url: ..
+---
+
 ## Caffe主程序代码解读
 
 ./tool/caffe.cpp
@@ -234,7 +238,7 @@ done
 
 MNIST dataset的详细数据格式，见Lecun网站 http://yann.lecun.com/exdb/mnist/。
 
-![1566391004164](2019-08-11-caffe-main.assets/1566391004164.png)
+![1573487091296](/_posts/2019-08-11-caffe-main.assets/1573487091296.png)
 
 ```c++
 // Usage: ./convert_mnist_data input_image_file input_label_file output_db_file 
